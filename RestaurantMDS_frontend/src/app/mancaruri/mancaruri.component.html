@@ -1,0 +1,92 @@
+
+<div class="add" onclick="openAddModal()">
+  <i class="fas fa-plus"></i>
+</div>
+
+<div class="wrapper">
+<table datatable  mdbTable class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume Mancare</th>
+      <th>Portii Disponibile</th>
+
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mancare of mancaruri; index as i;">
+      <td>{{mancare.Id}}</td>
+      <td>{{mancare.Nume}}</td>
+      <td>{{mancare.Cantitate}}</td>
+
+      <td><a class="control_btn" (click)=openUpdateModal(mancare)>Update</a>
+        <a class="control_btn" (click)=delete(mancare.Id)>Delete</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="modal-bg update-modal hidden">
+  <div class="modal">
+    <div class="row">
+      <label>
+        ID
+      </label>
+      <input type="number" readonly value="1" min="1" id="id-update">
+    </div>
+
+    <div class="row">
+      <label>
+        Nume
+      </label>
+      <input type="text" id="nume-update">
+    </div>
+
+    <div class="row">
+      <label>
+        Cantitate
+      </label>
+      <input type="number" value="1" min="1" id="cantitate-update">
+    </div>
+
+
+    <div class="row controls">
+        <a  (click)=closeUpdateModal()>Close</a>
+        <a (click)=updateMancare()>Update</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="modal-bg add-modal hidden">
+    <div class="modal">
+
+
+
+      <div class="row">
+        <label>
+          Nume
+        </label>
+        <input type="text" id="nume-add">
+      </div>
+
+      <div class="row">
+        <label>
+          Cantitate
+        </label>
+        <input type="number" value="1" min="1" id="cantitate-add">
+      </div>
+
+      <div class="row controls">
+          <a  (click)=closeAddModal()>Close</a>
+          <a (click)=addMancare()>Add</a>
+      </div>
+    </div>
+  </div>
+
+

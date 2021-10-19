@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RestaurantMDS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js" integrity="sha256-uVEHWRIr846/vAdLJeybWxjPNStREzOlqLMXjW/Saeo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    window.chartit = () => {
+    console.log("exec")
+    var ctx4 = document.getElementsByTagName('canvas')[3].getContext('2d');
+    window.mese = new Chart(ctx4, {
+        type: 'doughnut',
+        data: {
+            labels: window.mancaruri_keys,
+            datasets: [{
+                label: 'Cele mai dorite mancaruri',
+                data: window.mancaruri_values,
+                backgroundColor: window.backgrounds["mancaruri"]
+
+
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    var ctx3 = document.getElementsByTagName('canvas')[2].getContext('2d');
+    window.clienti = new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: window.clienti_keys,
+            datasets: [{
+                label: 'Cei mai fideli clienti',
+                data: window.clienti_values,
+                backgroundColor: window.backgrounds["clienti"]
+
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    var ctx2 = document.getElementsByTagName('canvas')[1].getContext('2d');
+    window.mese = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: window.mese_keys,
+            datasets: [{
+                label: 'Cele mai dorite zone',
+                data: window.mese_values,
+                backgroundColor: window.backgrounds["mese"]
+
+
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    var ctx1 = document.getElementsByTagName('canvas')[0].getContext('2d');
+    window.chelneri = new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: window.chelneri_keys,
+            datasets: [{
+                label: 'Efort Chelneri',
+                data: window.chelneri_values,
+                backgroundColor: window.backgrounds["chelneri"]
+
+
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+  }
+    </script>
+</body>
+</html>

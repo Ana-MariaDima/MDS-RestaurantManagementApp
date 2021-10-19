@@ -1,0 +1,17 @@
+i{
+  vertical-align: middle;
+  padding: 10px;
+
+}
+input{
+  width: 50%;
+  border: none;
+  box-shadow: 1px 1px 20px 0px #e3e3e3;
+  padding: 10px;
+}
+.search_trigger{
+  cursor: pointer;
+}
+.clicking{
+  text-shadow: 0px 0px 10px dodgerblue;
+}

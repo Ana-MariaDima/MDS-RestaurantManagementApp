@@ -1,0 +1,87 @@
+
+<div class="add" (click)=openAddModal()>
+  <i class="fas fa-plus"></i>
+</div>
+
+<div class="wrapper">
+<table datatable  mdbTable class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume</th>
+      <th>Locatie</th>
+      <th>Locuri</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let masa of mese; index as i;">
+      <td>{{masa.Id}}</td>
+      <td>Masa{{masa.Id}}</td>
+      <td>{{masa.Locatie}}</td>
+      <td>{{masa.NrLocuri}}</td>
+      <td><a class="control_btn" (click)=openUpdateModal(masa)>Update</a>
+        <a class="control_btn" (click)=delete(masa.Id)>Delete</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="modal-bg update-modal hidden">
+  <div class="modal">
+    <div class="row">
+      <label>
+        ID
+      </label>
+      <input type="number" readonly value="1" min="1" id="id-update">
+    </div>
+    <div class="row">
+      <label>
+        NrLocuri
+      </label>
+      <input type="number" value="1" min="1" id="locuri-update">
+    </div>
+    <div class="row">
+      <label>
+        Locatie
+      </label>
+      <input type="text" id="locatie-update">
+    </div>
+
+
+    <div class="row controls">
+        <a  (click)=closeUpdateModal()>Close</a>
+        <a (click)=updateMasa()>Update</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="modal-bg add-modal hidden">
+    <div class="modal">
+
+      <div class="row">
+        <label>
+          NrLocuri
+        </label>
+        <input type="number" step="1" min="1" id="locuri-add">
+      </div>
+      <div class="row">
+        <label>
+          Locatie
+        </label>
+        <input type="text" id="locatie-add">
+      </div>
+
+      <div class="row controls">
+          <a  (click)=closeAddModal()>Close</a>
+          <a (click)=addMasa()>Add</a>
+      </div>
+    </div>
+  </div>
+
+

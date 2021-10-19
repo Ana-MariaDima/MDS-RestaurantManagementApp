@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+.wrapper{
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 50%;
+  min-width: 700px;
+  text-align: center;
+}
+body{
+  padding-bottom: 100px;
+}
+.active-page a{
+  color: white!important;
+  background: black!important;
+}
+
+.wrapper  .paginate_button a {
+  text-decoration: none;
+  color: black;
+}
+.wrapper td{
+  padding-right: 20px!important;
+}
+.wrapper .paginate_button{
+  border: 1px solid black!important;
+}
+.wrapper .paginate_button:hover>a{
+  color: white;
+}
+.hidden{
+  display: none;
+}
+.modal-bg{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal{
+  margin:0 auto;
+  margin-top:100px;
+  width:300px;
+  height: 400px;
+  background: white;
+  padding:20px;
+  position: relative;
+  user-select: none;
+}
+.control_btn{
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px 0px gray;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.control_btn:hover{
+  box-shadow: 0px 0px 13px 0px royalblue;
+}
+
+.controls{
+  position: absolute;
+  bottom: 25px;
+  display: inline-flex;
+
+    justify-content: space-between;
+    /* flex-wrap: nowrap; */
+    width: calc(100% - 40px);
+
+}
+
+.controls a{
+  padding:5px;
+  border:1px solid black;
+  cursor: pointer;
+
+}
+.controls a:hover{
+  color: white;
+  background: black;
+}
+.row{
+  margin:10px 0;
+}
+.row label{
+  display: block;
+  margin-bottom: 5px;
+}
+.row input,.row select{
+  padding: 3px;
+  width: calc(100% - 10px);
+}
+.add{
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  padding:10px;
+  width:30px;
+  height: 30px;
+
+  border:1px solid black;
+  color: white;
+  background: black;
+  border-radius: 150%;
+  transition: .3s linear;
+  text-align: center;
+  cursor: pointer;
+}
+.add i{
+  font-size: 30px;
+  margin: 0 auto;
+  display: block;
+
+}
+.add:hover{
+  transform: rotate(45deg);
+}
+
+.link{
+  text-decoration:dashed;
+  cursor:pointer;
+  color: royalblue;
+}
+.link:hover{
+  color: blueviolet;
+}
+
+.grid{
+  margin-top:100px;
+}
+.cell canvas{
+  width:300px!important;
+}
+.cell{
+  margin:50px;
+  display: inline-block;
+}

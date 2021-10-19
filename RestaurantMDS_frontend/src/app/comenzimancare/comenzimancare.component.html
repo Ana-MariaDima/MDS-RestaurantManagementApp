@@ -1,0 +1,116 @@
+
+<div class="add" onclick="window.openAddModal()">
+  <i class="fas fa-plus"></i>
+</div>
+
+<div class="wrapper">
+<table datatable  mdbTable class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID ComandaMancare</th>
+      <th>Portii</th>
+      <th>Mancare</th>
+      <th>Comanda</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comandamancare of comenzimancare; index as i;">
+      <td>{{comandamancare.Id}}</td>
+      <td>{{comandamancare.NrPortii}}</td>
+      <td>{{mancaruri[i].Nume}}</td>
+      <td><a class="control_btn" (click)=redirectToComezni(comandamancare.ComandaId)>Comanda</a><div class="hidden">{{comandamancare.ComandaId}}</div></td>
+      <td><a class="control_btn" (click)=openUpdateModal(comandamancare)>Update</a>
+        <a class="control_btn" (click)=delete(comandamancare.Id)>Delete</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="modal-bg update-modal hidden">
+  <div class="modal">
+    <div class="row">
+      <label>
+        ID
+      </label>
+      <input type="number" readonly value="1" min="1" id="id-update">
+    </div>
+
+    <div class="row">
+      <label>
+        Comanda
+      </label>
+      <select id="comanda-update">
+        <option *ngFor="let comanda of toate_comenzile; index as i;" value="{{comanda.id}}" >{{getClient(comanda.clientId).nume +" "+ getClient(comanda.clientId).prenume}} - {{getChelner(comanda.chelnerId).nume+" "+ getChelner(comanda.chelnerId).prenume}} - {{getMasa(comanda.masaId).locatie}}</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>
+        Cantitate
+      </label>
+      <input type="text" id="cantitate-update">
+    </div>
+    <div class="row">
+      <label>
+        Mancare
+      </label>
+      <select id="mancare-update">
+        <option *ngFor="let mancare of toate_mancarurile; index as i;" value="{{mancare.id}}" >{{mancare.nume}}</option>
+      </select>
+    </div>
+
+
+    <div class="row controls">
+        <a  (click)=closeUpdateModal()>Close</a>
+        <a (click)=updateComandaMancare()>Update</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="modal-bg add-modal hidden">
+    <div class="modal">
+      <div class="row">
+        <label>
+          ID
+        </label>
+        <input type="number" readonly value="1" min="1" id="id-update">
+      </div>
+
+      <div class="row">
+        <label>
+          Comanda
+        </label>
+        <select id="comanda-add">
+          <option *ngFor="let comanda of toate_comenzile; index as i;" value="{{comanda.id}}" >{{getClient(comanda.clientId).nume +" "+ getClient(comanda.clientId).prenume}} - {{getChelner(comanda.chelnerId).nume+" "+ getChelner(comanda.chelnerId).prenume}} - {{getMasa(comanda.masaId).locatie}}</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>
+          Cantitate
+        </label>
+        <input type="text" id="cantitate-add">
+      </div>
+      <div class="row">
+        <label>
+          Mancare
+        </label>
+        <select id="mancare-add">
+          <option *ngFor="let mancare of toate_mancarurile; index as i;" value="{{mancare.id}}" >{{mancare.nume}}</option>
+        </select>
+      </div>
+
+      <div class="row controls">
+          <a  (click)=closeAddModal()>Close</a>
+          <a (click)=addComandaMancare()>Add</a>
+      </div>
+    </div>
+  </div>
+
+

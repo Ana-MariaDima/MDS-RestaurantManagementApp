@@ -1,0 +1,12 @@
+<div class="background">
+
+<div class="stage">
+  <div *ngFor="let kv of target_model | keyvalue; let i=index">
+    <div id="{{kv.key}}">Item {{kv.value}}</div>
+  </div>
+  <div *ngFor="let button of getButtons()">
+      <button (click)=getCallback(button)()>{{button}}</button>
+  </div>
+</div>
+
+</div>

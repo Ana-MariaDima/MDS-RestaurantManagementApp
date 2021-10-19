@@ -1,0 +1,274 @@
+
+<div class="add" onclick="window.openAddModal()">
+  <i class="fas fa-plus"></i>
+</div>
+
+<div class="wrapper">
+<table datatable  mdbTable class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cost</th>
+      <th>Metoda Plata</th>
+      <th>Masa</th>
+      <th>Chelner</th>
+      <th>Client</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>245</td>
+      <td>Cash</td>
+      <td>Masa1</td>
+      <td>Chelner1</td>
+      <td>Client1</td>
+      <td><a class="control_btn" onclick="window.openUpdateModal()">Update</a>
+        <a class="control_btn" onclick="window.openUpdateModal()">Delete</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="modal-bg update-modal hidden">
+  <div class="modal">
+
+    <div class="row">
+      <label>
+        Cost
+      </label>
+      <input type="number" value="245" min="1">
+    </div>
+    <div class="row">
+      <label>
+        Mod Plata
+      </label>
+      <input type="text" [defaultValue]="'Cash'">
+    </div>
+    <div class="row">
+      <label>
+        Masa
+      </label>
+      <select>
+        <option>Masa1</option>
+        <option>Masa2</option>
+        <option>Masa3</option>
+        <option>Masa4</option>
+        <option>Masa5</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>
+        Chelner
+      </label>
+      <select>
+        <option>Chelner1</option>
+        <option>Chelner2</option>
+        <option>Chelner3</option>
+        <option>Chelner4</option>
+        <option>Chelner5</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>
+        Client
+      </label>
+      <select>
+        <option>Client1</option>
+        <option>Client2</option>
+        <option>Client3</option>
+        <option>Client4</option>
+        <option>Client5</option>
+      </select>
+    </div>
+
+
+    <div class="row controls">
+        <a  onclick="window.closeUpdateModal()">Close</a>
+        <a onclick="window.closeUpdateModal()">Update</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="modal-bg add-modal hidden">
+    <div class="modal">
+
+      <div class="row">
+        <label>
+          Cost
+        </label>
+        <input type="number" value="25" min="1">
+      </div>
+      <div class="row">
+        <label>
+          Mod Plata
+        </label>
+        <input type="text" [defaultValue]="'Card'">
+      </div>
+      <div class="row">
+        <label>
+          Masa
+        </label>
+        <select>
+          <option>Masa1</option>
+          <option selected>Masa2</option>
+          <option>Masa3</option>
+          <option>Masa4</option>
+          <option>Masa5</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>
+          Chelner
+        </label>
+        <select>
+          <option>Chelner1</option>
+          <option selected>Chelner2</option>
+          <option>Chelner3</option>
+          <option>Chelner4</option>
+          <option>Chelner5</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>
+          Client
+        </label>
+        <select>
+          <option>Client1</option>
+          <option selected>Client2</option>
+          <option>Client3</option>
+          <option>Client4</option>
+          <option>Client5</option>
+        </select>
+      </div>
+
+
+      <div class="row controls">
+          <a  onclick="window.closeAddModal()">Close</a>
+          <a onclick="window.closeAddModal()">Add</a>
+      </div>
+    </div>
+  </div>
+
+

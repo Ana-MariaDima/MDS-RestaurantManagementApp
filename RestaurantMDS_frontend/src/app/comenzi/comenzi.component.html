@@ -1,0 +1,162 @@
+
+<div class="add" onclick="window.openAddModal()">
+  <i class="fas fa-plus"></i>
+</div>
+
+<div class="wrapper">
+<table datatable  mdbTable class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cost</th>
+      <th>Metoda Plata</th>
+      <th>Masa</th>
+      <th>Chelner</th>
+      <th>Client</th>
+      <th>Comenzi Mancare</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comanda of comenzi; index as i;">
+      <td>{{comanda.Id}}</td>
+      <td>{{comanda.Cost}}</td>
+      <td>{{comanda.ModPlata}}</td>
+      <td><a class="link" (click)=redirectToMese(mese[i].Id)>{{mese[i].Locatie}}</a></td>
+      <td><a class="link" (click)=redirectToChelneri(chelneri[i].Id)>{{chelneri[i].Nume+" "+chelneri[i].Prenume}}</a></td>
+      <td><a class="link" (click)=redirectToClients(clienti[i].Id)>{{clienti[i].Nume+" "+clienti[i].Prenume}}</a></td>
+      <td><a class="link" (click)=redirectToComenziMancare(comanda.Id)>Comenzi Mancare</a>
+
+      <td><a class="control_btn" (click)=openUpdateModal(comanda)>Update</a>
+        <a class="control_btn" (click)=delete(comanda.Id)>Delete</a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="modal-bg update-modal hidden">
+  <div class="modal">
+    <div class="row">
+      <label>
+        ID
+      </label>
+      <input type="number" readonly value="1" min="1" id="id-update">
+    </div>
+
+    <div class="row">
+      <label>
+        Cost
+      </label>
+      <input type="number"  min="1" id="cost-update">
+
+    </div>
+
+    <div class="row">
+      <label>
+        Metoda
+      </label>
+      <select id="metoda-update">
+        <option value="Cash">Cash</option>
+        <option value="Card">Card</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>
+        Masa
+      </label>
+      <select id="masa-update">
+        <option *ngFor="let masa of toate_mesele; index as i;" value="{{masa.id}}" >{{masa.locatie}}</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>
+        Chelner
+      </label>
+      <select id="chelner-update">
+        <option *ngFor="let chelner of toti_chelnerii; index as i;" value="{{chelner.id}}" >{{chelner.nume}}</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>
+        Client
+      </label>
+      <select id="client-update">
+        <option *ngFor="let client of toti_clientii; index as i;" value="{{client.id}}" >{{client.nume}}</option>
+      </select>
+    </div>
+
+
+    <div class="row controls">
+        <a  (click)=closeUpdateModal()>Close</a>
+        <a (click)=updateComanda()>Update</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="modal-bg add-modal hidden">
+    <div class="modal">
+      <div class="row">
+        <label>
+          ID
+        </label>
+        <input type="number" readonly value="1" min="1" id="id-add">
+      </div>
+
+      <div class="row">
+        <label>
+          Cost
+        </label>
+        <input type="number"   min="1" id="cost-add">
+
+      </div>
+
+      <div class="row">
+        <label>
+          Metoda
+        </label>
+        <select id="metoda-add">
+          <option value="Cash">Cash</option>
+          <option value="Card">Card</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>
+          Masa
+        </label>
+        <select id="masa-add">
+          <option *ngFor="let masa of toate_mesele; index as i;" value="{{masa.id}}" >{{masa.locatie}}</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>
+          Chelner
+        </label>
+        <select id="chelner-add">
+          <option *ngFor="let chelner of toti_chelnerii; index as i;" value="{{chelner.id}}" >{{chelner.nume}}</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>
+          Client
+        </label>
+        <select id="client-add">
+          <option *ngFor="let client of toti_clientii; index as i;" value="{{client.id}}" >{{client.nume}}</option>
+        </select>
+      </div>
+
+
+      <div class="row controls">
+          <a  (click)=closeAddModal()>Close</a>
+          <a (click)=addComanda()>Create</a>
+      </div>
+    </div>
+  </div>
+
+

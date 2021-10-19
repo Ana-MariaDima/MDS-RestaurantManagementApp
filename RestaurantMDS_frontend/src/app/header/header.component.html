@@ -1,0 +1,61 @@
+<nav>
+<div>
+  <ul class="nav navbar" style="margin-top: 50px;">
+    <li class="nav-item" routerLinkActive="active-page" [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a
+        class="nav-link"
+        routerLink="/">
+        <i class="fas fa-shopping-cart"></i>
+        Comenzi
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/comenzimancare">
+        <i class="fas fa-plus-circle"></i>
+        ComenziMancare
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/mancaruri">
+        <i class="fas fa-edit"></i>
+        Mancaruri
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/stats">
+        <i class="fas fa-address-book"></i>
+        Statistica
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/clienti">
+        <i class="fas fa-info"></i>
+        Clienti
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/contact">
+        <i class="fas fa-info"></i>
+        Contact
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/mese">
+        <i class="fas fa-info"></i>
+        Mese
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active-page">
+      <a class="nav-link" routerLink="/chelneri">
+        <i class="fas fa-info"></i>
+        Chelneri
+      </a>
+    </li>
+  </ul>
+  <app-search></app-search>
+
+</div>
+</nav>
